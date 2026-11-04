@@ -13,8 +13,8 @@
 @media screen,print{
  .growth-report{display:block;color:#000;font-family:'Songti SC','SimSun',serif;font-size:11pt;line-height:1.5}
  .growth-report *{color:#000!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important}
- .report-sheet{page:growth;min-height:266mm;display:flex;flex-direction:column;break-after:page;overflow:visible}
- .report-sheet:last-child{break-after:auto}
+ .report-sheet{min-height:260mm;display:flex;flex-direction:column;overflow:visible}
+ .report-sheet+.report-sheet{break-before:page}
  .report-heading{border-top:2pt solid #000;border-bottom:1.2pt solid #000;padding:4mm 0;margin-bottom:4mm}
  .report-class{text-align:center;font-size:10pt;letter-spacing:1pt}
  .report-heading h1{text-align:center;font-size:24pt;font-weight:700;letter-spacing:4pt;margin:3mm 0 5mm}
@@ -74,3 +74,12 @@
 .letter-report .letter-signoff{text-align:right;font-size:11pt;margin:2mm 0 5mm}
 .letter-report .reflection-block{border:0;padding:0;margin-bottom:4mm}
 .letter-report .report-summary{margin:1mm 0 3mm}
+
+/* Keep one named page context across students; never force a trailing page. */
+@media print{
+ body:has(.growth-report){page:growth;margin:0;padding:0}
+ body:has(.growth-report) .shell{display:block;min-height:0}
+ body:has(.growth-report) main,body:has(.growth-report) .content{display:block;width:100%;max-width:none;margin:0;padding:0;min-height:0}
+ .growth-report,#print-batch{margin:0;padding:0;min-height:0}
+ .report-sheet{page:auto;break-after:auto}
+}
