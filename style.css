@@ -8,6 +8,7 @@
  :root,body{background:#fff!important;color:#000!important}
  body:has(.growth-report) .content> :not(.student-screen):not(.growth-report){display:none!important}
  .student-screen{display:none!important}
+ .growth-report .report-exam-date{display:none!important}
 }
 @media screen,print{
  .growth-report{display:block;color:#000;font-family:'Songti SC','SimSun',serif;font-size:11pt;line-height:1.5}
