@@ -3,7 +3,7 @@
 
 /* Dedicated paper report: solid rules remain visible with background graphics off. */
 .growth-report{display:block}
-@page growth{size:A4 portrait;margin:14mm}
+@page{size:A4 portrait;margin:14mm}
 @media print{
  :root,body{background:#fff!important;color:#000!important}
  body:has(.growth-report) .content> :not(.student-screen):not(.growth-report){display:none!important}
@@ -13,7 +13,7 @@
 @media screen,print{
  .growth-report{display:block;color:#000;font-family:'Songti SC','SimSun',serif;font-size:11pt;line-height:1.5}
  .growth-report *{color:#000!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important}
- .report-sheet{min-height:260mm;display:flex;flex-direction:column;overflow:visible}
+ .report-sheet{display:block;overflow:visible}
  .report-sheet+.report-sheet{break-before:page}
  .report-heading{border-top:2pt solid #000;border-bottom:1.2pt solid #000;padding:4mm 0;margin-bottom:4mm}
  .report-class{text-align:center;font-size:10pt;letter-spacing:1pt}
@@ -32,7 +32,7 @@
  .report-sheet small{display:block;font-size:8.5pt}
  .report-summary{display:flex;flex-wrap:wrap;gap:2mm 8mm;font-size:10pt;margin:2mm 0 4mm}
  .report-note{font-size:9pt}
- .report-footer{margin-top:auto;padding-top:4mm;display:flex;justify-content:space-between;gap:5mm;border-bottom:1pt solid #000;padding-bottom:2mm;font-size:9pt}
+ .report-footer{margin-top:8mm;padding-top:4mm;display:flex;justify-content:space-between;gap:5mm;border-bottom:1pt solid #000;padding-bottom:2mm;font-size:9pt}
  .reflection-block{border:1pt solid #000;padding:3mm;margin:1mm 0 4mm;break-inside:avoid}
  .writing-lines>div{height:8mm;border-bottom:.6pt solid #000}
  .report-signature{display:flex;justify-content:space-between;gap:5mm;margin-top:5mm;font-size:10pt}
@@ -77,9 +77,9 @@
 
 /* Keep one named page context across students; never force a trailing page. */
 @media print{
- body:has(.growth-report){page:growth;margin:0;padding:0}
+ body:has(.growth-report){margin:0;padding:0}
  body:has(.growth-report) .shell{display:block;min-height:0}
  body:has(.growth-report) main,body:has(.growth-report) .content{display:block;width:100%;max-width:none;margin:0;padding:0;min-height:0}
  .growth-report,#print-batch{margin:0;padding:0;min-height:0}
- .report-sheet{page:auto;break-after:auto}
+ .report-sheet{break-after:auto}
 }
