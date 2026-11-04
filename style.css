@@ -65,3 +65,12 @@
  .print-comparison{break-inside:avoid}
  .report-review{font-size:10pt}
 }
+
+.letter-report .report-heading{border-top:0;border-bottom:.8pt solid #000;padding-top:2mm;margin-bottom:5mm}
+.letter-report .report-heading h1{font-size:22pt;letter-spacing:2pt}
+.letter-report .letter-salutation{font-size:12pt;font-weight:700;margin:2mm 0 3mm}
+.letter-report .letter-paragraph{font-size:11pt;line-height:1.85;text-indent:2em;margin-bottom:3mm}
+.letter-report table caption{text-align:left;font-size:10pt;font-weight:700;padding:2mm 0}
+.letter-report .letter-signoff{text-align:right;font-size:11pt;margin:2mm 0 5mm}
+.letter-report .reflection-block{border:0;padding:0;margin-bottom:4mm}
+.letter-report .report-summary{margin:1mm 0 3mm}
