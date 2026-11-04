@@ -2,12 +2,14 @@
 .student-metrics{margin-top:0}.student-panels{grid-template-columns:1.8fr 1fr}.student-panels td,.student-panels th{padding:10px}.negative{color:#ad6543}.positive{color:#268879}.order-list{display:grid;gap:8px}.order-row{display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #e4ebe4;border-radius:10px}.order-row>span:nth-child(2){flex:1}.order-row small{display:block;margin-top:4px}.order-num{display:grid;place-items:center;width:27px;height:27px;background:#ecf4ee;color:#327f67;border-radius:50%;font-size:11px}.order-controls{display:flex;gap:4px}.order-controls button{padding:4px 9px}@media(max-width:900px){.student-panels{grid-template-columns:1fr}}
 
 /* Dedicated paper report: solid rules remain visible with background graphics off. */
-.growth-report{display:none}
+.growth-report{display:block}
 @page growth{size:A4 portrait;margin:14mm}
 @media print{
  :root,body{background:#fff!important;color:#000!important}
  body:has(.growth-report) .content> :not(.student-screen):not(.growth-report){display:none!important}
  .student-screen{display:none!important}
+}
+@media screen,print{
  .growth-report{display:block;color:#000;font-family:'Songti SC','SimSun',serif;font-size:11pt;line-height:1.5}
  .growth-report *{color:#000!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important}
  .report-sheet{page:growth;min-height:266mm;display:flex;flex-direction:column;break-after:page;overflow:visible}
@@ -33,4 +35,20 @@
  .reflection-block{border:1pt solid #000;padding:3mm;margin:1mm 0 4mm;break-inside:avoid}
  .writing-lines>div{height:8mm;border-bottom:.6pt solid #000}
  .report-signature{display:flex;justify-content:space-between;gap:5mm;margin-top:5mm;font-size:10pt}
+}
+
+@media screen{
+ .growth-report{max-width:900px;margin:0 auto}
+ .growth-report .report-sheet{min-height:0;background:#fff!important;padding:32px;margin-bottom:24px;border:1px solid #b9c1bb;border-radius:3px}
+ .growth-report .report-footer{margin-top:24px}
+ .growth-analysis summary{cursor:pointer;font-weight:600}
+ .growth-analysis[open] summary{margin-bottom:20px}
+}
+@media screen and (max-width:700px){
+ .growth-report .report-sheet{padding:16px 10px}
+ .report-heading h1{font-size:21pt;letter-spacing:2pt}
+ .report-identity,.report-signature,.report-footer{flex-wrap:wrap}
+ .report-sheet table{font-size:9pt}
+ .report-sheet small{font-size:8pt}
+ .report-history th:first-child{width:27%}
 }
