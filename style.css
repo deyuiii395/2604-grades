@@ -53,3 +53,15 @@
  .report-sheet small{font-size:8pt}
  .report-history th:first-child{width:27%}
 }
+
+@media screen{.student-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media screen and (max-width:700px){.student-metrics{grid-template-columns:1fr}}
+
+@media screen{.growth-report,#print-batch{display:none!important}}
+@media print{
+ body:has(#print-batch)>:not(#print-batch){display:none!important}
+ #print-batch{display:block}
+ #print-batch>.growth-report+.growth-report{break-before:page}
+ .print-comparison{break-inside:avoid}
+ .report-review{font-size:10pt}
+}
