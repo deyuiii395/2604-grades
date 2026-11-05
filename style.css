@@ -57,6 +57,15 @@
 @media screen{.student-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media screen and (max-width:700px){.student-metrics{grid-template-columns:1fr}}
 
+.star-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.star-card{border-color:#d9e7d6;background:#fcfdfb}
+.star-name{font-size:19px;font-weight:700;color:#247965;line-height:1.5;overflow-wrap:anywhere;margin:12px 0 4px}
+.star-gain{font-size:13px;color:#247965;margin:0 0 14px}
+.star-empty{font-size:13px;color:#78887f;margin:14px 0}
+.star-summary{border-top:1px solid #e4ece3;padding-top:11px;font-size:11px;color:#748779;line-height:1.6}
+.subjectgrid .star-card{margin:20px 0 0;padding:16px}
+.subjectgrid .star-card h3{font-size:14px;margin:0}
+
 @media screen{.growth-report,#print-batch{display:none!important}}
 @media print{
  body:has(#print-batch)>:not(#print-batch){display:none!important}
