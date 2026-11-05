@@ -67,6 +67,13 @@
 .star-summary{border-top:1px solid #e4ece3;padding-top:11px;font-size:11px;color:#748779;line-height:1.6}
 .subjectgrid .star-card{margin:20px 0 0;padding:16px}
 .subjectgrid .star-card h3{font-size:14px;margin:0}
+.distribution-wrap{margin:10px 0}
+.distribution-table{font-size:11px;white-space:normal}
+.distribution-table th,.distribution-table td{padding:8px 5px}
+.distribution-table th:first-child,.distribution-table td:first-child{white-space:nowrap}
+.distribution-count{display:flex;align-items:center;gap:5px;min-width:70px}
+.distribution-count span{white-space:nowrap;min-width:28px}
+.distribution-count i{display:block;height:6px;min-width:0;background:#4d9b80;border-radius:5px}
 
 @media screen{.growth-report,#print-batch{display:none!important}}
 @media print{
