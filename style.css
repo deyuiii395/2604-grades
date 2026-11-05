@@ -68,6 +68,15 @@
 .subjectgrid .star-card{margin:20px 0 0;padding:16px}
 .subjectgrid .star-card h3{font-size:14px;margin:0}
 .distribution-wrap{margin:10px 0}
+.distribution-chart{margin:10px 0 12px}
+.distribution-chart svg{display:block;width:100%;height:auto}
+.distribution-legend{display:flex;flex-wrap:wrap;gap:14px;color:#718477;font-size:11px}
+.distribution-legend span{display:inline-flex;align-items:center;gap:6px}
+.distribution-legend i{display:inline-block;width:17px;height:5px;border-radius:5px}
+.distribution-legend .observed-key{background:#78ad96}
+.distribution-legend .normal-key{background:#d58d55}
+.distribution-details{margin:12px 0}
+.distribution-details summary{cursor:pointer;color:#347c67;font-size:11px}
 .distribution-table{font-size:11px;white-space:normal}
 .distribution-table th,.distribution-table td{padding:8px 5px}
 .distribution-table th:first-child,.distribution-table td:first-child{white-space:nowrap}
